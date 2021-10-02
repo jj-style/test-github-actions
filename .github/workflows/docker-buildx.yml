@@ -1,4 +1,7 @@
-on: [push]
+on:
+  push:
+    paths:
+      - 'docker-buildx/**'
 
 name: Build Docker Image
 jobs:
