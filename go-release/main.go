@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println("I am running on", runtime.GOOS, runtime.GOARCH)
+	fmt.Println("I  am running on", runtime.GOOS, runtime.GOARCH)
 }
