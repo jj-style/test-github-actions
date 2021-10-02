@@ -11,6 +11,11 @@ jobs:
         # build and publish in for multiple machine architectures in parallel:
         goos: [linux, windows, darwin]
         goarch: [amd64, arm64]
+        exclude:
+          # exclude this combo as results in unsupported GOOS/GOARCH pair windows/arm64
+          - goos: windows
+            goarch: arm64
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
