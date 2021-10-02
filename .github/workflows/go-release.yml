@@ -1,7 +1,6 @@
 on:
-  push:
-    paths:
-      - 'go-release/**'
+  release:
+    types: [created]
 
 name: Build and Release Go Binaries
 jobs:
