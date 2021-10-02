@@ -17,6 +17,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Go Build Release
+        env:
+          CGO_ENABLED: 1
+          CGO_CFLAGS_ALLOW: "-Xpreprocessor"
         uses: wangyoucao577/go-release-action@v1.20
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
